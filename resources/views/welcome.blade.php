@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section ('content')
-<div style="height: 620px">
+<div >
     <h1> Home Page </h1>
 </div>
 @endsection

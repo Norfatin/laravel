@@ -35,11 +35,13 @@
 <body>
 
     <!-- Start your project here-->
+    <div class="vh-100">
     @include('layouts.navbar')
 
     @yield('content')
 
     @include('layouts.footer')
+    </div>
     <!-- End your project here-->
 
     <!-- jQuery -->
