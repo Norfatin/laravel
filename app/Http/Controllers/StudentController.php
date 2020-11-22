@@ -34,7 +34,8 @@ class StudentController extends Controller
     }
 
     public function read(){
-        return view('read');
+        $students = Student::all();
+        return view('read',compact('students'));
     }
 
     public function update(){
