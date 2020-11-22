@@ -23,8 +23,25 @@
                     <td>{{ $student->last_name }}</td>
                     <td>{{ $student->email }}</td>
                     <td>{{ $student->phone_no }}</td>
-                    <td><a class="btn btn-raised btn-cyan btm-sm" href="{{ route('edit', $student->id) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                        <a class="btn btn-raised btn-danger btm-sm" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    <td>
+                        <a class="btn btn-raised btn-cyan btm-sm" href="{{ route('edit', $student->id) }}">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                        
+                        <form method="POST" id="delete-form-{{$student->id}}"  action="{{ route('delete', $student->id) }}" style="display: none;">
+                            {{ csrf_field() }}
+                            {{ method_field('delete') }}
+                        </form>
+
+                        <button onClick="if (confirm('Are you sure you want to delete record?')) {
+                            event.preventDefault();
+                            document.getElementById('delete-form-{{$student->id}}').submit();
+                            } else {
+                                event.preventDefault();
+                                }"
+                            class="btn btn-raised btn-danger btm-sm">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
                     </td>
                 </tr>
             @endforeach

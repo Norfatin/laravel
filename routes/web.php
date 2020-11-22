@@ -23,7 +23,7 @@ Route::get('/edit/{id}', 'StudentController@edit')->name('edit');
 
 Route::post('/update/{id}', 'StudentController@update')->name('update');
 
-Route::get('/delete', 'StudentController@delete');
+Route::delete('/delete/{id}', 'StudentController@delete')->name('delete');
 
 Route::get('/test', 'TestController@index');
 
