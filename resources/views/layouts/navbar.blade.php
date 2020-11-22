@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/">Student Database</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -15,23 +15,23 @@
 
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="{{url('/')}}">Home
-            <span class="sr-only">(current)</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{url('/create')}}">Add New Record</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{url('/read')}}">Read Record</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{url('/update')}}">Update Record</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{url('/delete')}}">Delete Record</a>
-        </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('/')}}">Home
+                <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/create')}}">Add New Record</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/read')}}">Read Records</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="{{url('/update')}}">Update Record</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="{{url('/delete')}}">Delete Record</a>
+            </li>
         </ul>
         
     </div>

@@ -34,7 +34,7 @@ class StudentController extends Controller
     }
 
     public function read(){
-        $students = Student::all();
+        $students = Student::paginate(4);
         return view('read',compact('students'));
     }
 
