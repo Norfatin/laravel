@@ -5,7 +5,7 @@
 
     <div class="container">
         <table class="table">
-            <thead class="black white-text">
+            <thead class="cyan white-text">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">First Name</th>
@@ -23,7 +23,9 @@
                     <td>{{ $student->last_name }}</td>
                     <td>{{ $student->email }}</td>
                     <td>{{ $student->phone_no }}</td>
-                    <td>Edit || Delete</td>
+                    <td><a class="btn btn-raised btn-cyan btm-sm" href="{{ route('edit', $student->id) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="btn btn-raised btn-danger btm-sm" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
