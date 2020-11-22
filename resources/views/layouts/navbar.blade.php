@@ -16,15 +16,21 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="{{url('/')}}">Home
             <span class="sr-only">(current)</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="{{url('/create')}}">Add New Record</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="{{url('/read')}}">Read Record</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('/update')}}">Update Record</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('/delete')}}">Delete Record</a>
         </li>
         </ul>
         

@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', 'StudentController@index');
+Route::get('/', 'StudentController@index')->name('home');
+
+Route::get('/create', 'StudentController@create')->name('create');
+
+Route::get('/read', 'StudentController@read');
+
+Route::get('/update', 'StudentController@update');
+
+Route::get('/delete', 'StudentController@delete');
 
 Route::get('/test', 'TestController@index');
 
